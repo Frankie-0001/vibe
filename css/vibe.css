@@ -1,0 +1,114 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'overpass', 'sans-serif';
+}
+
+header {
+    background: rgb(253, 253, 253);
+    box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.1);
+    padding: 17px 45px;
+    position: relative;
+    position: relative;
+}
+
+.main-nav .web {
+    display: none;
+
+}
+
+
+.name {
+    font-style: italic;
+    color: rgb(43, 41, 41);
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 20px;
+    position: absolute;
+    bottom: 19px;
+    left: 30px;
+
+}
+
+.button {
+    background: rgb(223, 3, 3);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.submit {
+    display: none;
+}
+
+.btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+li {
+    list-style: none;
+    padding-right: 35px;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(39, 38, 38);
+}
+
+
+/* ==============================
+Media Queries
+================================*/
+
+@media (min-width: 760px) {
+
+    img {
+        display: none;
+    }
+    
+    .main-nav .web {
+        display: block;
+    }
+
+    .main-header,
+    .main-nav {
+        display: flex;
+    }
+
+    .btn {
+        display: none;
+    }
+
+    .main-header {
+        justify-content: space-between;
+    }
+
+    .submit {
+        display: block;
+        background: rgb(223, 3, 3);
+        color: white;
+        border-radius: 20px;
+        padding: 7px 12px;
+        margin: 0;
+    }
+    
+    .web {
+        padding-top: 8px;
+    }
+
+    .secondary {
+        color: rgb(224, 7, 7);
+    }
+}
