@@ -1,114 +1,155 @@
-
+/*
+  I asked you to download a vscode extension called Prettier.
+  I hope you have.
+  And also please set your indentation to 2 spaces. It's at
+  bottom side of vscode.
+*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'overpass', 'sans-serif';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Add google fonts link please. And also, I used Cabin.*/
+  font-family: 'overpass', 'sans-serif';
 }
 
 header {
-    background: rgb(253, 253, 253);
-    box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.1);
-    padding: 17px 45px;
-    position: relative;
-    position: relative;
+  background: rgb(253, 253, 253);
+  box-shadow: 0 3px 15px 3px rgba(0, 0, 0, 0.1);
+  padding: 17px 45px;
+
+  /* repeated styles */
+  position: relative;
+  position: relative;
 }
+
+/*  
+  You should really start namespacing properly. At least so you don't
+  have to later on.
+
+  For example, there might be tons of images used so I think it's a bad 
+  idea to target img directly to add styles to the img in the header.
+
+  A better approach would be say: 
+  header img {}
+  header .name {}
+  header .main-nav li {}
+
+  You get the idea
+*/
 
 .main-nav .web {
-    display: none;
-
-}
-
-
-.name {
-    font-style: italic;
-    color: rgb(43, 41, 41);
+  display: none;
 }
 
 .name {
-    display: flex;
-    justify-content: center;
+  font-style: italic;
+  color: rgb(43, 41, 41);
 }
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+/*
+  I see you're trying to center vertically. There is a better way
+  to vertically center absolutely positioned elements
+
+  {
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+
+  The 'left' property remains same though. Remember, this is for
+  centering vertically.
+
+  And also as much as you can try using icon fonts and svgs for icons,
+  preferably icon fonts. I'd recommend checking out fontawesome. It's
+  really great. Even the free tier comes with enough nice-looking fonts.
+*/
 
 img {
-    width: 20px;
-    position: absolute;
-    bottom: 19px;
-    left: 30px;
-
+  width: 20px;
+  position: absolute;
+  bottom: 19px;
+  left: 30px;
 }
 
 .button {
-    background: rgb(223, 3, 3);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
+  background: rgb(223, 3, 3);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
 }
 
 .submit {
-    display: none;
+  display: none;
 }
 
 .btn {
-    position: absolute;
-    top: 20px;
-    right: 10px;
+  position: absolute;
+  top: 20px;
+  right: 10px;
 }
 
 li {
-    list-style: none;
-    padding-right: 35px;
-    font-size: 13px;
+  list-style: none;
+  padding-right: 35px;
+  font-size: 13px;
 }
 
 a {
-    text-decoration: none;
-    color: rgb(39, 38, 38);
+  text-decoration: none;
+  color: rgb(39, 38, 38);
 }
-
 
 /* ==============================
 Media Queries
 ================================*/
 
 @media (min-width: 760px) {
+  /*
+  And also again with the namespacing. It's really important.
+  */
 
-    img {
-        display: none;
-    }
-    
-    .main-nav .web {
-        display: block;
-    }
+  img {
+    display: none;
+  }
 
-    .main-header,
-    .main-nav {
-        display: flex;
-    }
+  .main-nav .web {
+    display: block;
+  }
 
-    .btn {
-        display: none;
-    }
+  .main-header,
+  .main-nav {
+    display: flex;
+  }
 
-    .main-header {
-        justify-content: space-between;
-    }
+  .btn {
+    display: none;
+  }
 
-    .submit {
-        display: block;
-        background: rgb(223, 3, 3);
-        color: white;
-        border-radius: 20px;
-        padding: 7px 12px;
-        margin: 0;
-    }
-    
-    .web {
-        padding-top: 8px;
-    }
+  .main-header {
+    justify-content: space-between;
+  }
 
-    .secondary {
-        color: rgb(224, 7, 7);
-    }
+  .submit {
+    display: block;
+    background: rgb(223, 3, 3);
+    color: white;
+    border-radius: 20px;
+    padding: 7px 12px;
+    margin: 0;
+  }
+
+  .web {
+    padding-top: 8px;
+  }
+
+  .secondary {
+    color: rgb(224, 7, 7);
+  }
 }
