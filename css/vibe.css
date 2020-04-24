@@ -1,8 +1,29 @@
+/*
+You included the google fonts link without specifying all the desired
+font styles and/or weights you'd like to use on the site. For example,
+you used font weight 700 somewhere in your stylesheets meanwhile you
+didn't select that font weight.
+
+You should correct this.
+
+On the google fonts site, prior to copying the link you can select all
+the different weights and styles you'd want to use.
+*/
+
+/*
+On the mobile view, the text 'Vibecoast' should be centered.
+*/
+
+/*
+The background of the header should be white unless it was intentional on
+your side to use the current color.
+*/
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Cabin", "sans-serif";
+  font-family: 'Cabin', 'sans-serif';
 }
 
 body {
@@ -54,6 +75,10 @@ Media Queries
 ======================*/
 
 @media (min-width: 769px) {
+  /*
+  I mentioned that targeting elements this way is wrong!!!!!!!!!
+  */
+
   i.fas {
     display: none;
   }
