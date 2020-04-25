@@ -39,6 +39,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .web-view {
@@ -67,8 +68,11 @@ a {
   font-weight: 700;
 }
 
-.name {
-  margin-left: 80px;
+.name-mob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /* ===================
@@ -84,9 +88,10 @@ Media Queries
     display: none;
   }
 
-  .name {
-    margin-right: 30px;
-    margin-left: 0;
+  .name-web {
+    position: absolute;
+    top: 50%;
+    left: 10%;
   }
 
   .web-view {
